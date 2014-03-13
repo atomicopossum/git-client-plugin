@@ -620,7 +620,7 @@ public class CliGitAPIImpl extends LegacyCompatibleGitAPIImpl {
                 args.add("--reference", reference);
         }
         listener.getLogger().println(reference);
-        url = reference;
+        URLish url = reference;
         StandardCredentials cred = credentials.get(url);
         if (cred == null) cred = defaultCredentials;
         launchCommandWithCredentials(args, workspace, cred, url);
